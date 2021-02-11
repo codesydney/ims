@@ -1,1 +1,1 @@
-# ims
+# Illawarra Multicultural Services Project
