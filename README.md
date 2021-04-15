@@ -17,7 +17,7 @@
 
 ----
 ## Specifications
-- [Requirements Specification](#todo)
+- [Requirements Specification](https://drive.google.com/drive/folders/1fTruZhi7XA44nRxNDASurpCHShT7S8co?usp=sharing)
 - [Figma Prototype](#todo)
 - [Design Document](#todo)
 ----
