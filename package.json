@@ -1,0 +1,23 @@
+{
+    "name": "ims",
+    "version": "1.0.0",
+    "description": "Main repo for IMS project developed by Code.Sydney",
+    "main": "index.js",
+    "directories": {
+        "doc": "docs"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/codesydney/ims.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/codesydney/ims/issues"
+    },
+    "homepage": "https://github.com/codesydney/ims#readme"
+}

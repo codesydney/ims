@@ -1,13 +1,18 @@
 # Illawarra Multicultural Services Project
 
 ## Table of Contents
-- [About the Project](#about-the-project)
-- [Project Files](#project-files)
-- [Specifications](#specifications)
+- [Illawarra Multicultural Services Project](#illawarra-multicultural-services-project)
+  - [Table of Contents](#table-of-contents)
+  - [About the Project](#about-the-project)
+  - [Project Files](#project-files)
+  - [Specifications](#specifications)
+  - [- Design Document](#--design-document)
 
 ----
 
 ## About the Project
+
+> Read the [wiki here]()
 
 ----
 ## Project Files
