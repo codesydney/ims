@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./App";
+import AppWrapper from "./app/AppWrapper";
 
 import CssBaseline from "@material-ui/core/CssBaseline";
 import { ThemeProvider } from "@material-ui/core";
@@ -17,7 +17,7 @@ ReactDOM.render(
     <React.StrictMode>
         <ThemeProvider theme={Theme}>
             <CssBaseline />
-            <App />
+            <AppWrapper />
         </ThemeProvider>
     </React.StrictMode>,
     document.getElementById("root")
