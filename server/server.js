@@ -1,19 +1,22 @@
 const express = require("express");
+const logger = require("./config/logger");
 
 const app = express();
+const NAMESPACE = "SERVER";
 
-// middleware
+// ===== MIDDLEWARE SETUP ============================================================
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // api routes
-app.get("/api", (req, res) => {
-    res.json({ msg: "hello world" });
-});
+const sampleRoutes = require("./routes/sample.route");
+const apiPrefix = "/api";
 
-// server connection
+app.use(`${apiPrefix}/sample/`, sampleRoutes);
 
-// starting server
+// ===== DATABASE SETUP ============================================================
+
+// ===== SERVER STARTUP ============================================================
 app.listen(8080, () => {
-    console.log("server starting at localhost:8080");
+    logger.info(NAMESPACE, "server running on localhost:8080");
 });
