@@ -22,9 +22,9 @@ const log = (type) => {
 };
 
 // setting logging types
-const info = log("INFO");
-const error = log("ERROR");
-const warn = log("WARN");
-const debug = log("DEBUG");
+const info = log('INFO');
+const error = log('ERROR');
+const warn = log('WARN');
+const debug = log('DEBUG');
 
 module.exports = { info, error, warn, debug };

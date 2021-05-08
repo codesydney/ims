@@ -1,8 +1,8 @@
-import React from "react";
-import { BrowserRouter, Route } from "react-router-dom";
+import React from 'react';
+import { BrowserRouter, Route } from 'react-router-dom';
 
-import * as pages from "../pages/Pages";
-import Layout from "../components/layout/Layout";
+import * as pages from '../pages/Pages';
+import Layout from '../components/layout/Layout';
 
 /* 
     App component handling routing

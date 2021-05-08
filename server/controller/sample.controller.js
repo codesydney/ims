@@ -3,7 +3,7 @@
 */
 
 const hello = (req, res) => {
-    res.status(200).json({ msg: "hello world" });
+    res.status(200).json({ msg: 'hello world' });
 };
 
 module.exports = {

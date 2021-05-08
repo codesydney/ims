@@ -7,6 +7,11 @@
         "doc": "docs"
     },
     "scripts": {
+        "serve": "cd server && npm run serve",
+        "install-deps": "sh install_deps.sh",
+        "build": "cd client && npm run build && wait",
+        "dev-client": "cd client && npm run start",
+        "dev-server": "cd server && npm run start",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "repository": {
