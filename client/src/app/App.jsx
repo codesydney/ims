@@ -7,6 +7,7 @@ import Layout from '../components/layout/Layout';
 /* 
     App component handling routing
 */
+console.log(pages)
 
 const App = () => {
     return (
@@ -14,7 +15,7 @@ const App = () => {
             <Layout>
                 <Route exact path="/" component={pages.Landing} />
                 <Route path="/login" component={pages.Login} />
-                <Route path="/signue" component={pages.SignUp} />
+                <Route path="/signup" component={pages.SignUp} />
             </Layout>
         </BrowserRouter>
     );
