@@ -16,11 +16,10 @@ app.use(`${apiPrefix}/sample/`, sampleRoutes);
 
 // ===== DATABASE SETUP ============================================================
 const mongoose_stuff = require('./db/mongoose')
-const customer_model = require('./models/customer')
-const provider_model = require('./models/provider')
 
-console.log(customer_model)
-console.log(provider_model)
+const the_model = require('./models/the_model')
+
+console.log(the_model)
 
 
 
