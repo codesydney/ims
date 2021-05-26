@@ -1,4 +1,5 @@
 const mongoose = require('mongoose')
+const validator = require('validator')
 
 const The_model = mongoose.model('the_model', {
     name:{
@@ -32,7 +33,7 @@ const The_model = mongoose.model('the_model', {
         required:true
     },
     roles:{
-        type:String,
+        type:[String],
         required:true
     },
     createdAt:{
