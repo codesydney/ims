@@ -15,6 +15,19 @@ const apiPrefix = '/api';
 app.use(`${apiPrefix}/sample/`, sampleRoutes);
 
 // ===== DATABASE SETUP ============================================================
+const mongoose_stuff = require('./db/mongoose')
+
+const the_model = require('./models/the_model')
+
+console.log(the_model)
+
+
+
+
+
+
+
+
 
 // ===== SERVER STARTUP ============================================================
 app.listen(8080, () => {
