@@ -23,6 +23,6 @@
 ----
 ## Specifications
 - [Requirements Specification](https://drive.google.com/drive/folders/1fTruZhi7XA44nRxNDASurpCHShT7S8co?usp=sharing)
-- [Figma Prototype](#todo)
+- [Figma Prototype](https://www.figma.com/file/z2fulFW5YYy0p16CCGWdFY/Migram?node-id=0%3A1)
 - [Design Document](#todo)
 ----
