@@ -1,6 +1,27 @@
 const mongoose = require('mongoose')
 const validator = require('validator')
 
+const Basic_user_schema = new mongoose.Schema({
+    name: {
+        type: String,
+    },
+    email: {
+        type: String,
+    },
+    password: {
+        type: String,
+    },
+    service_provider: {
+        type: String,
+    }
+});
+
+const Basic_user_model = mongoose.model('breakfast', Basic_user_schema)
+
+module.exports = Basic_user_model
+
+
+
 const The_model = mongoose.model('the_model', {
     name:{
         type:String,
@@ -112,5 +133,3 @@ const The_model = mongoose.model('the_model', {
     },
 
 })
-
-module.exports = The_model
