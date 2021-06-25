@@ -3,6 +3,27 @@ const validator = require('validator')
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 
+const Basic_user_schema = new mongoose.Schema({
+    name: {
+        type: String,
+    },
+    email: {
+        type: String,
+    },
+    password: {
+        type: String,
+    },
+    service_provider: {
+        type: String,
+    }
+});
+
+const Basic_user_model = mongoose.model('breakfast', Basic_user_schema)
+
+module.exports = Basic_user_model
+
+
+
 const UserSchema = new mongoose.Schema({
     name:{
         type:String,
@@ -170,5 +191,3 @@ UserSchema.pre('remove', async function(next){
 })
 
 const User = mongoose.model('User', UserSchema)
-
-module.exports = User
