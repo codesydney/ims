@@ -1,7 +1,9 @@
 const mongoose = require('mongoose')
 const validator = require('validator')
+const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
 
-const The_model = mongoose.model('the_model', {
+const UserSchema = new mongoose.Schema({
     name:{
         type:String,
         required:true
@@ -113,4 +115,60 @@ const The_model = mongoose.model('the_model', {
 
 })
 
-module.exports = The_model
+UserSchema.methods.toJSON = function(){
+    const the_data = this.toObject()
+    delete the_data.password
+    delete the_data.tokens
+    return the_data
+}
+
+//----------- CREATE TOKEN ---------------
+UserSchema.methods.create_token = async function(){
+    const new_token = jwt.sign({_id: this._id.toString()}, 'testingjwt')
+    this.tokens = this.tokens.concat({token: new_token})
+    await this.save()
+    return new_token
+}
+
+UserSchema.statics.check_login = async (email, password)=>{
+    console.log('CHECK LOGIN FUNCTION -> ')
+    const user = await User.findOne({
+        email:email
+    })
+
+    if(user == undefined){
+        return console.log('cannot find user')
+    }
+    console.log('USER->', user)
+    console.log('USER PWORD', user.password)
+    console.log('THE PWORD', password)
+    const password_checked_using_brypt = await bcrypt.compare(password, user.password)
+    console.log('LINE 88',password_checked_using_brypt)
+    if(password_checked_using_brypt == true){
+        console.log('correct password')
+        return user
+    }else{
+        throw new Error('fail password')
+    }
+}
+
+UserSchema.pre('save', async function(next){
+    if(this.isModified('password')){
+        const result = await bcrypt.hash(this.password, 8)
+        this.password = result
+        console.log('PWORD HASH RESULT', result)
+    }
+    next()
+})
+
+// DELETE USER
+UserSchema.pre('remove', async function(next){
+    console.log('PRE REMOVE FUNCTION')
+    console.log(this)
+
+    next()
+})
+
+const User = mongoose.model('User', UserSchema)
+
+module.exports = User

@@ -22,7 +22,18 @@ class Login extends React.Component {
     }else if (this.state.password == ''){
       alert('please enter password')
     }else{
-      this.props.history.push("/dashboard")
+      this.props.history.push("/users")
+
+
+      // fetch(`/users`, {
+      //   method: 'post',
+      //   headers: {'Content-Type': 'application/json'},
+      //   body: JSON.stringify({
+      //       user_input: this.state.input
+      //   })
+      // })
+
+
     }
 
   }
